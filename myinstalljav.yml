@@ -1,0 +1,17 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: i want to install java on ubuntu nodes
+    apt:
+     name: 
+     state: present
+    when: ansible-os-family=="debian"
+
+  - name: i want to install java on ubuntu nodes
+    yum: 
+     name:
+     state: present
+    when: ansible-os-family=="debian"
+
+  
