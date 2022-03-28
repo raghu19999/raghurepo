@@ -1,3 +1,12 @@
 [webserver]
 172.31.1.226
 172.31.15.4
+
+[aplicatiomserver]
+172.52.6.22
+
+
+
+[webserver:vars]
+myjavapackageforubuntu= openjdk-8-jre
+myjavapacakageforredhat= java-1.8.0-openjdk
