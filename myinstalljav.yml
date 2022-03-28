@@ -10,7 +10,7 @@
 
   - name: i want to install java on ubuntu nodes
     yum: 
-     name: "{{java-1.8.0-openjdk}}"
+     name: "{{myjavapacakageforredhat}}"
      state: present
     when: ansible_os_family=="RedHat"
 
