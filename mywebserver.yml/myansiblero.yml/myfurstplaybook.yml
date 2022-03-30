@@ -1,5 +1,5 @@
 ---
-- hosts: all 
+- hosts: 172.31.12.16
   tasks: 
    - name: i want to install webserver on ubuntu16 ansible nodes
      apt: 
@@ -7,4 +7,4 @@
        state: present
 
 
-       
+
