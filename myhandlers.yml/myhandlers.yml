@@ -1,5 +1,5 @@
 ---
-- hosts: webserver
+- hosts: 172.31.12.16
   become: yes
   tasks: 
   - include_tasks: myfile.yml
