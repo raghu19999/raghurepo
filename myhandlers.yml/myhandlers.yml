@@ -1,0 +1,29 @@
+---
+- hosts: webbserver
+  become: yes
+  tasks: 
+  - include_tasks: myfile.yml
+  - name: iwant to install webbserver
+    apt:
+      name: apache2
+      state: present
+
+
+  - name: i want to install webserver
+    apt: 
+     name: apache2
+     state: present
+
+  - name: i want to copy file into nodes
+    template:
+       src: myindex.j2
+       dest: /var/www/html/index.html
+       
+  handlers:
+  - name: restrtwebserver
+    service:
+      name: webserver
+      state: restsrted
+           
+
+
