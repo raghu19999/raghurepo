@@ -1,5 +1,5 @@
 ---
-- hosts: webbserver
+- hosts: webserver
   become: yes
   tasks: 
   - include_tasks: myfile.yml
@@ -7,8 +7,8 @@
     apt:
       name: apache2
       state: present
-
-
+    notify: restrtwebserver
+     
   - name: i want to install webserver
     apt: 
      name: apache2
@@ -18,6 +18,8 @@
     template:
        src: myindex.j2
        dest: /var/www/html/index.html
+    notify: restrtwebserver
+     
        
   handlers:
   - name: restrtwebserver
